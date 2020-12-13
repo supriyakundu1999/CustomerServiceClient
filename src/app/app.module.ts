@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
 import { CookieService } from 'ngx-cookie-service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,9 @@ import { CookieService } from 'ngx-cookie-service';
     ],
     imports: [
         BrowserModule,
+        ReactiveFormsModule,
         AppRoutingModule
+
     ],
     providers: [CookieService],
     bootstrap: [AppComponent]
