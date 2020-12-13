@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CustomerServiceClient"
+    }
+  },
+  "defaultProject": "CustomerServiceClient",
+  "cli": {
+    "analytics": false
+  }
 }
