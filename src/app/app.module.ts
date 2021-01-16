@@ -7,7 +7,7 @@ import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
 import { CookieService } from 'ngx-cookie-service';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
     declarations: [
         AppComponent,
@@ -17,8 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     imports: [
         BrowserModule,
         ReactiveFormsModule,
-        AppRoutingModule
-
+        AppRoutingModule,
+        HttpClientModule
     ],
     providers: [CookieService],
     bootstrap: [AppComponent]
