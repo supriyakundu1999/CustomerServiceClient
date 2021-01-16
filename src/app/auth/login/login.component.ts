@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
                 this.cookieService.set('sessionID', data.sessionID, 1)
             },
             err => {
-                console.log(err)
+                console.log(err.error)
             }
         )
     }
