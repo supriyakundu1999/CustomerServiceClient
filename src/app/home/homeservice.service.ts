@@ -8,26 +8,25 @@ import { environment } from 'src/environments/environment'
 @Injectable({
     providedIn: 'root'
 })
-export class AuthserviceService {
-
+export class HomeserviceService {
 
     constructor(
         private cookieService: CookieService,
         private http: HttpClient
     ) { }
 
-    loginService(userCredential: any): Observable<any> {
+    fetchUserDetails(): Observable<any> {
 
         let httpHeaders = new HttpHeaders({
             'content-type': "application/json",
             'session_id': this.cookieService.get('sessionID')
         })
-        let url = environment.baseServerUrl + "account/login"
 
-        return this.http.post<any>(
+        let url = environment.baseServerUrl + "fetchUserDetails"
+
+        return this.http.get<any>(
             url,
-            userCredential,
-            { headers: httpHeaders, observe: 'response' }
+            { headers: httpHeaders }
         )
     }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
+import { from } from 'rxjs';
+import { HomeserviceService } from './homeservice.service'
 
 @Component({
     selector: 'app-home',
@@ -10,11 +11,19 @@ export class HomeComponent implements OnInit {
 
     userId: string
 
-    constructor(private cookieService: CookieService) { }
+    constructor(
+        private homeService: HomeserviceService
+    ) { }
 
     ngOnInit(): void {
-        this.userId = this.cookieService.get('userId');
-        console.log("Cookie: " + this.userId)
+        this.homeService.fetchUserDetails().subscribe(
+            data => {
+                console.log(data)
+                this.userId = data.userName
+            },
+            err => {
+                console.log(err)
+            }
+        )
     }
-
 }
