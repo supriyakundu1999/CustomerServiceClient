@@ -30,8 +30,9 @@ export class LoginComponent implements OnInit {
         // this.cookieService.set('userId', this.loginForm.value.userName, 1)
         this.auth.loginService(this.loginForm.value).subscribe(
             data => {
-                console.log(data.body, data.headers)
-                this.cookieService.set('sessionID', data.body.sessionID, 1)
+                console.log(data.body)
+                console.log(data.headers.get('session_id'), data.headers)
+                this.cookieService.set('sessionID', data.headers.get('session_id'), 1)
             },
             err => {
                 console.log(err.error)
