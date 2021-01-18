@@ -1,1 +1,13 @@
-<p>useroperation works!</p>
+<h3>Student Info</h3>
+<form [formGroup]="userInfoForm" (ngSubmit)="submitUserInfo()">
+    <br><label for="stuName">Name: </label>
+    <input type="text" formControlName="stuName" id="stuName">
+
+    <br><label for="class">Class: </label>
+    <input type="text" formControlName="class" id="class">
+
+    <br><label for="stream">Stream: </label>
+    <input type="text" formControlName="stream" id="stream">
+
+    <br><button [disabled]="userInfoForm.invalid">Submit</button>
+</form>
