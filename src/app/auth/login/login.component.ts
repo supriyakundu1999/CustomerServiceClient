@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
             data => {
                 console.log(data.body)
                 console.log(data.headers.get('session_id'), data.headers)
-                this.cookieService.set('sessionID', data.headers.get('session_id'), 1)
+                this.cookieService.set('sessionID', data.headers.get('session_id'), 10)
             },
             err => {
                 console.log(err.error)
