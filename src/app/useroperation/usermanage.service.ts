@@ -20,6 +20,8 @@ export class UsermanageService {
         private http: HttpClient
     ) { }
 
+    //TODO Get all user data
+
     submitUserInfo(userInfo: any): Observable<any> {
 
         let url = environment.baseServerUrl + "student/info"
