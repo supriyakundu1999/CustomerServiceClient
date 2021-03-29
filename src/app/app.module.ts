@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { CookieService } from 'ngx-cookie-service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AgGridModule } from 'ag-grid-angular'
+import { from } from 'rxjs';
 @NgModule({
     declarations: [
         AppComponent,
@@ -18,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
         BrowserModule,
         ReactiveFormsModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        AgGridModule.withComponents([]),
     ],
     providers: [CookieService],
     bootstrap: [AppComponent]
