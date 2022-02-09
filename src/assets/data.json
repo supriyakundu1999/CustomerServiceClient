@@ -1,0 +1,6 @@
+[
+    { "make": "Toyota", "model": "Celica1", "price": 35000, "chBox": true },
+    { "make": "Ford", "model": "Mondeo1", "price": 38000, "chBox": false },
+    { "make": "Ford", "model": "Mondeo4", "price": 32000, "chBox": true },
+    { "make": "Porsche", "model": "Boxter", "price": 72000, "chBox": false }
+]

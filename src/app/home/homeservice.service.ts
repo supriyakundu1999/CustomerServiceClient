@@ -29,4 +29,8 @@ export class HomeserviceService {
             { headers: httpHeaders }
         )
     }
+
+    fetchCarDetails(): Observable<any> {
+        return this.http.get<any>("../../assets/data.json")
+    }
 }
