@@ -1,2 +1,5 @@
 Cookie service
 npm install ngx-cookie-service
+
+For Debugging
+https://www.c-sharpcorner.com/article/debugging-angular-11-application-in-visual-studio-code/
